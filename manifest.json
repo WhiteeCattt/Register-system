@@ -1,0 +1,41 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "§lRegister system - 1.20.30+",
+		"description": "§l§¶Регистрация: §g-register <пароль> <пароль>\n§fАвторизация: §g-login <пароль>\n§fСбросить пароль: §g-reset <новый пароль> <новый пароль>",
+		"uuid": "b2eb5206-83cc-11ee-b962-0242ac120002",
+		"version": [ 1, 1, 0 ],
+		"min_engine_version": [ 1, 20, 30 ]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "b2eb50c6-83cc-11ee-b962-0242ac120002",
+			"version": [ 0, 0, 1 ]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/index.js",
+			"uuid": "b2eb4e6e-83cc-11ee-b962-0242ac120002",
+			"version": "1.4.0-beta"
+		}
+	],
+	"metadata": {
+		"authors": [
+			"WhiteeCattt"
+		]
+	},
+	"dependencies": [
+		{
+			"description": "@minecraft/server module dependency",
+			"module_name": "@minecraft/server",
+			"version": "1.6.0-beta"
+		},
+		{
+			"description": "@minecraft/server-ui module dependency",
+			"module_name": "@minecraft/server-ui",
+			"version": "1.2.0-beta"
+		}
+	]
+}
