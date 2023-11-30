@@ -42,7 +42,7 @@ system.runInterval(() => {
         if (db.get(`Register:${player.name}`) == false) {
             db.set(`Time:${player.name}`, db.get(`Time:${player.name}`) - 1)
             if (db.get(`Time:${player.name}`) < 1) {
-                player.runCommandAsync(`say kick "${player.name}" §r\nВы не успели зарегестрироваться!`)
+                player.runCommandAsync(`kick "${player.name}" §r\nВы не успели зарегестрироваться!`)
             }
             player.runCommandAsync(`titleraw @s actionbar {"rawtext":[{"text":"Зарегестрируйтесь! У вас осталось §g${db.get(`Time:${player.name}`)}§r сек.\nИспользуйте: §g${prefix}register <пароль> <пароль>"}]}`)
             player.addEffect(`resistance`, 60, { amplifier: 255, showParticles: false })
@@ -53,7 +53,7 @@ system.runInterval(() => {
         if (db.get(`Login:${player.name}`) == false) {
             db.set(`Time:${player.name}`, db.get(`Time:${player.name}`) - 1)
             if (db.get(`Time:${player.name}`) < 1) {
-                player.runCommandAsync(`say kick "${player.name}" §r\nВы не успели авторизоваться!`)
+                player.runCommandAsync(`kick "${player.name}" §r\nВы не успели авторизоваться!`)
             }
             player.runCommandAsync(`titleraw @s actionbar {"rawtext":[{"text":"Авторизуйтесь! У вас осталось §g${db.get(`Time:${player.name}`)}§r сек.\nИспользуйте: §g${prefix}login <пароль>"}]}`)
             player.addEffect(`resistance`, 60, { amplifier: 255, showParticles: false })
