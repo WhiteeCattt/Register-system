@@ -103,7 +103,7 @@ world.beforeEvents.chatSend.subscribe((data) => {
             player.sendMessage(loginPrefix + `Не верный пароль!`)
             db.set(`Attemps:${player.name}`, db.get(`Attemps:${player.name}`) - 1)
             if (db.get(`Attemps:${player.name}`) < 1) {
-                player.runCommandAsync(`say kick "${player.name}" §r\nВы ввели не правильный пароль слишком много раз!`)
+                player.runCommandAsync(`kick "${player.name}" §r\nВы ввели не правильный пароль слишком много раз!`)
             }
         } else {
             player.sendMessage(loginPrefix + `Вы успешно авторизовались!`)
